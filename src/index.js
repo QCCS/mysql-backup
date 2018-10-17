@@ -15,7 +15,6 @@ function backup(mysqlConf) {
     console.log("备份数据：");
     cmd.get(backCmd,
         function (err, data, stderr) {
-            console.log(stderr);
             if (!err) {
                 console.log("备份完成")
             } else {
@@ -73,7 +72,6 @@ function delBackup(mysqlConf, count) {
 
     function del(mysqlConf, fileName) {
         var backCmd = "rm " + mysqlConf.backupPath + fileName;
-        console.log(backCmd)
         cmd.get(backCmd,
             function (err, data, stderr) {
                 if (!err) {
