@@ -17,7 +17,8 @@ var config = {
         password: 'password',
         database: 'database_name',
         port: '3306',
-        backupPath:"backupPath"//先创建备份文件夹，把路径写这里
+        backupPath:"backupPath"//先创建备份文件夹，把绝对路径写这里,
+        // backupPath:"./src/backup-db/"  也可以是相对路径
     }
 };
 mysqlConf = config.mysql;
